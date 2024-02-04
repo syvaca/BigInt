@@ -3,14 +3,6 @@
 #include <exception>
 using namespace std;
 
-//------------------------------------------------------------------------------
-//------------------------------------------------------------------------------
-//IMPORTANT: This file is complete. 
-//			-	Do NOT add/remove anything in this file.
-//------------------------------------------------------------------------------
-//------------------------------------------------------------------------------
-
-
 //===================================
 //BigInt class definition
 //===================================
@@ -20,13 +12,13 @@ class BigInt {
 		//-----------------------------------
 		//Constructor/Destructor
 		//-----------------------------------
-		BigInt();					          //create BigInt with base 10
-		BigInt(int setbase);		    //create BigInt with a certain base
-		BigInt(int input,int base);	//create BigInt from int (base 10) to a certain base
+		BigInt();				//create BigInt with base 10
+		BigInt(int setbase);			//create BigInt with a certain base
+		BigInt(int input,int base);		//create BigInt from int (base 10) to a certain base
 		BigInt(const string &s,int base);	//create BigInt from string
-		BigInt(const BigInt &b);	  //create BigInt from another BigInt (copy constructor)
-		~BigInt();					        //destructor
-    BigInt & operator = (const BigInt &b);	//assignment or copy
+		BigInt(const BigInt &b);	  	//create BigInt from another BigInt (copy constructor)
+		~BigInt();				//destructor
+    BigInt & operator = (const BigInt &b);		//assignment or copy
   
 		//-----------------------------------
 		//Comparison
@@ -54,8 +46,8 @@ class BigInt {
 
 	private:
 		vector<int> vec;		//vector to hold digits
-		int base;				    //any base between 2 and 36
-		bool isPositive;	  //true if positive, false if negative.
+		int base;			//any base between 2 and 36
+		bool isPositive;	  	//true if positive, false if negative.
 		//main function for division and modulus (private)
 		void divisionMain(const BigInt &b, BigInt &quotient, BigInt &remainder);
 };
